@@ -1,13 +1,16 @@
 {
   "name": "expense-backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "server.ts",
   "scripts": {
-    "dev": "nodemon server.ts",
+    "dev": "nodemon --loader ts-node/esm server.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/node": "^25.3.3",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
